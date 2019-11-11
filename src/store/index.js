@@ -5,17 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+      app:{
+          title: '',
+          logo: '<span class="font-weight-light">izzuddin</span>Raffar'
+      },
       drawer:{
-          status: false,
+          status: true,
           items: [
-            { icon: 'inbox', title: 'Inbox' },
-            { icon: 'star', title: 'Starred' },
-            { icon: 'send', title: 'Sent mail' },
-            { icon: 'drafts', title: 'Drafts' },
+            { icon: 'home', title: 'Welcome', link:'/'},
+            { icon: 'info', title: 'About', link:'/about' },
+            { icon: 'view_module', title: 'Projects' , link:'/projects'},
+            { icon: 'dashboard', title: 'Collections', link:'collections/' },
             { divider: true },
-            { icon: 'mail', title: 'All mail' },
-            { icon: 'delete', title: 'Trash' },
-            { icon: 'error', title: 'Spam' },
+            { icon: 'person', title: 'My Resume', link:'/my-resume' },
+            { icon: 'share', title: 'Repository', link:'/repository' },
+            { icon: 'email', title: 'Contact', link:'/contact' },
           ],
       },
     user:{

@@ -10,15 +10,19 @@
     </v-img>
 
     <v-list>
-      <template v-for="(item, i) in drawerItems" >
-        <v-divider v-if="item.divider" :key="i"></v-divider>
-        <v-list-item v-else :key="i">
-          <v-list-item-action>
-            <v-icon>{{item.icon}}</v-icon>
-          </v-list-item-action>
-          <v-list-item-title>{{item.title}}</v-list-item-title>
-        </v-list-item>
-      </template>
+      <v-list-item-group color="primary">
+        <template v-for="(item, i) in drawerItems">
+          <v-divider v-if="item.divider" :key="i"></v-divider>
+          <router-link v-else :key="i" :to="item.link">
+            <v-list-item>
+              <v-list-item-action>
+                <v-icon>{{item.icon}}</v-icon>
+              </v-list-item-action>
+              <v-list-item-title>{{item.title}}</v-list-item-title>
+            </v-list-item>
+          </router-link>
+        </template>
+      </v-list-item-group>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -47,6 +51,10 @@ export default {
     rgba(0, 0, 0, 0.4) 0%,
     transparent 72px
   );
+}
+
+.v-application a {
+  text-decoration: none;
 }
 </style>
 
