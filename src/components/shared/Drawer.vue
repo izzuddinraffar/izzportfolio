@@ -1,6 +1,6 @@
  <template>
   <v-navigation-drawer app :value="drawerOpened">
-    <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+    <v-img :aspect-ratio="16/9" src="@/assets/drawer/material.webp">
       <v-row align="end" class="lightbox white--text pa-2 fill-height">
         <v-col>
           <div class="subheading">{{this.$store.state.user.name}}</div>
