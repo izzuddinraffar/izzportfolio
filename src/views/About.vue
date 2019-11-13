@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container pa-0">
+    <div class="header"></div>
   </div>
 </template>
+
+
+
+<style lang="scss">
+  .container{
+    .header{
+       height:137px;
+       width:100%;
+       background-color:#007791;
+    }
+  }
+</style>

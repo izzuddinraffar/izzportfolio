@@ -51,7 +51,7 @@
   color: #06bad5 !important;
 }
 
-.dark-blue--text {
+.darkblue--text {
   color: #5f7987 !important;
 }
 

@@ -20,13 +20,23 @@ export default new Vuex.Store({
             { icon: 'assignment_ind', title: 'My Resume', link:'/my-resume' },
             { icon: 'share', title: 'Repository', link:'/repository' },
             { icon: 'info', title: 'About', link:'/about' },
-            { icon: 'email', title: 'Contact', link:'/contact' },
+            { icon: 'email', title: 'Contact', link:'/contact' }
           ],
       },
     user:{
         name: 'Mohamad Izzuddin',
         email: 'izzuddinraffar@gmail.com'
-    }
+    },
+    projects:[
+      { icon: 'home', title: 'HomeTutor - Online Learning', link:'/'},
+      { icon: 'person', title: 'Xcelearn - Life Long Learning', link:'/profile'},
+      { icon: 'dashboard', title: 'Simpana -  Cloud Asset Management', link:'/dashboard'},
+      { icon: 'view_module', title: 'Insight - Bussiness Intelligence' , link:'/projects'},
+      { icon: 'assignment_ind', title: 'Centrack', link:'/my-resume' },
+      { icon: 'share', title: 'My Repository', link:'/repository' },
+      { icon: 'info', title: 'My Portfolio', link:'/about' },
+      { icon: 'email', title: 'Content Management System', link:'/contact' }
+    ]
   },
   mutations: {
     drawerHandler: state => {
