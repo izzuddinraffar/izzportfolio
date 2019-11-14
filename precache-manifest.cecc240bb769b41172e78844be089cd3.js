@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/izzportfolio/css/about.f43a28af.css"
   },
   {
-    "revision": "aa4cc71b05ab728b5bf9",
+    "revision": "bd3ccb94c2c7bf51ee02",
     "url": "/izzportfolio/css/app.79bfe9e2.css"
   },
   {
@@ -14,6 +14,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "394ad74da3bfc717e9cd",
     "url": "/izzportfolio/css/chunk-50ba4952.cb09a615.css"
+  },
+  {
+    "revision": "a6c433bc31280585124c",
+    "url": "/izzportfolio/css/chunk-fe9c2f72.f43a28af.css"
   },
   {
     "revision": "7f11e30edc55718f64e1",
@@ -48,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/izzportfolio/img/material.ff63319c.webp"
   },
   {
-    "revision": "ba95fe7b3e57f950c35267b73be84776",
+    "revision": "2c826b373724e22e33076d5edfe06eed",
     "url": "/izzportfolio/index.html"
   },
   {
@@ -56,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/izzportfolio/js/about.2a6ff9f2.js"
   },
   {
-    "revision": "aa4cc71b05ab728b5bf9",
-    "url": "/izzportfolio/js/app.1ee35cf3.js"
+    "revision": "bd3ccb94c2c7bf51ee02",
+    "url": "/izzportfolio/js/app.54b8b776.js"
   },
   {
     "revision": "57a79217266a3c6ddac2",
@@ -66,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "394ad74da3bfc717e9cd",
     "url": "/izzportfolio/js/chunk-50ba4952.df049b11.js"
+  },
+  {
+    "revision": "a6c433bc31280585124c",
+    "url": "/izzportfolio/js/chunk-fe9c2f72.9654c4d1.js"
   },
   {
     "revision": "7f11e30edc55718f64e1",
