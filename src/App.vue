@@ -1,6 +1,6 @@
 <template>
   <v-app :class="path">
-    <Navbar />
+    <Navbar :appPath="path" />
     <Drawer />
     <v-content>
       <router-view class="pa-4"></router-view>
@@ -37,5 +37,9 @@ export default {
 <style>
 html {
   overflow: auto !important;
+}
+
+.darkblue--text {
+  color: #5f7987 !important;
 }
 </style>

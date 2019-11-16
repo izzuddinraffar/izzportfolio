@@ -1,31 +1,39 @@
 <template>
   <div class="container">
-    <div class="header-banner d-flex justify-center col-md-12">
-      <div class=" d-flex align-center col-md-9">
+    <!-- <div class="header-banner d-flex justify-center col-md-12">
+      <div class=" d-flex align-center col-md-11">
         <div>
-          <h4 class="subtitle-1 grey--text">Profile</h4>
-           <h3 class="display-1 font-weight-bold darkblue--text">See My Profile <br/> Looks like...</h3>
+          <h3 class="display-1 font-weight-bold title-color">
+            See My Profile <br />
+            Looks like...
+          </h3>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="d-flex justify-center col-md-12">
-      <div class="d-flex align-top col-md-9">
-        <div class="d-flex col-md-3">
+      <div class="d-flex align-top col-md-11">
+        <div class="d-flex col-md-5">
           <div class="col-md-12">
-            <div class="d-flex align-center flex-column">
-              <v-avatar size="120">
+            <div class="d-flex align-center flex-column mr-10">
+              <!-- <v-avatar size="120">
                 <img src="@/assets/avatar.jpg" alt="Izzuddin" />
-              </v-avatar>
+              </v-avatar> -->
+              <template>
+                <RadarChart />
+              </template>
               <v-btn large color="error" class="white--text mt-5 btn-skill">
                 <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
               </v-btn>
             </div>
           </div>
         </div>
-        <div class="d-flex col-md-9">
+        <div class="d-flex col-md-7">
           <div class="col-md-12">
+            <h3 class="display-1 font-weight-bold title-color  mb-3">
+              ABOUT ME
+            </h3>
             <p class="darkblue--text font-weight-bold mb-3">
-              Experience as (Web) Developer
+              Experience as Software Developer
             </p>
             <p>
               Starting out at the age of 13 I never stopped learning new
@@ -68,24 +76,45 @@
 </style>
 
 <style lang="scss" scooped>
-.profile{
+.profile {
   .container {
-  padding: 0px !important;
-  .header-banner {
-    height: 137px;
-    width: 100%;
-    // background-color: #007791;
-    // color: #fff;
+    padding: 0px !important;
+    .header-banner {
+      // height: 137px;
+      width: 100%;
+      // background-color: #007791;
+      // color: #fff;
+    }
+    .btn-skill {
+      min-width: 200px !important;
+    }
   }
-  .btn-skill{
-    min-width: 200px !important;
+  header {
+    background-color: #009fb3 !important;
+    border-color: #009fb3 !important;
+    color: #fff !important;
+
+    .v-tab {
+      color: rgba(255, 255, 255, 0.84) !important;
+    }
+    button,
+    i,
+    .v-toolbar__title,
+    .v-tab--active {
+      color: #fff !important;
+    }
   }
-
-}
-
-}
-
-.darkblue--text {
-  color: #5f7987 !important;
+  .title-color {
+    color: #009fb3 !important;
+  }
 }
 </style>
+
+<script>
+import RadarChart from "../components/profile/RadarChart";
+export default {
+  components: {
+    RadarChart
+  }
+};
+</script>
