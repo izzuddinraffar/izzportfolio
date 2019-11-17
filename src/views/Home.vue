@@ -28,14 +28,7 @@
 
 <style lang="scss">
 .home .v-content__wrap {
-  background-image: linear-gradient(
-    to right bottom,
-    #606060,
-    #858585,
-    #acacac,
-    #d5d5d5,
-    #ffffff
-  );
+  background-image: linear-gradient(to right bottom, #1b1b1b, #4c4c4c, #838383, #bfbfbf, #ffffff);
 }
 
 #app.home {
