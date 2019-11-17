@@ -115,20 +115,86 @@ export default new Vuex.Store({
       ]
     },
     projects: [
-      { icon: "home", title: "HomeTutor", link: "/" },
-      { icon: "person", title: "Xcelearn ", link: "/profile" },
-      { icon: "dashboard", title: "Simpana ", link: "/dashboard" },
-      { icon: "view_module", title: "Insight", link: "/projects" },
-      { icon: "assignment_ind", title: "Centrack", link: "/my-resume" },
-      { icon: "share", title: "My Repository", link: "/repository" },
-      { icon: "info", title: "My Portfolio", link: "/about" },
-      { icon: "email", title: "Content Management System", link: "/contact" }
+      {
+        image: "home",
+        title: "HomeTutor",
+        link: "/",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.JS",
+          "Redux.JS",
+          "jQuery",
+          "PHP",
+          "MySQL",
+          "Responsive Design",
+          "Web Development"
+        ]
+      },
+      {
+        image: "person",
+        title: "Xcelearn ",
+        link: "/profile",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.JS",
+          "Redux.JS",
+          "Node.JS",
+          "PostgreSQL",
+          "Web Development"
+        ]
+      },
+      {
+        image: "dashboard",
+        title: "Simpana ",
+        link: "/dashboard",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.JS",
+          "Redux.JS",
+          "MySQL",
+          "Web Development"
+        ]
+      },
+      {
+        image: "view_module",
+        title: "Insight",
+        link: "/projects",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.JS",
+          "Redux.JS",
+          "MySQL",
+          "Web Development"
+        ]
+      },
+      {
+        image: "assignment_ind",
+        title: "Centrack",
+        link: "/my-resume",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React.JS",
+          "Redux.JS",
+          "MySQL",
+          "Web Development"
+        ]
+      }
     ]
   },
   mutations: {
     drawerHandler: state => {
       state.drawer.status = state.drawer.status ? false : true;
-    }
+    },
   },
   actions: {},
   modules: {}

@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <template v-for="(item, i) in projectItems">
+        <template v-for="(item, i) in projects">
           <div :key="i">
             <div class="pa-1">
               <v-card max-width="310">
@@ -48,18 +48,14 @@
                   <!-- <div class="my-4 subtitle-1 black--text">
                     Technologies
                   </div> -->
-                  <v-chip-group
-                    active-class="deep-purple accent-4 white--text"
-                    column
+
+                  <v-chip
+                    :ripple="false"
+                    v-bind:style="item.style[ti]"
+                    v-for="(tech, ti) in item.tech"
+                    :key="ti"
+                    >{{ tech }}</v-chip
                   >
-                    <v-chip>React.js</v-chip>
-
-                    <v-chip>Redux.js</v-chip>
-
-                    <v-chip>Node.js</v-chip>
-
-                    <v-chip>PostgreSQL</v-chip>
-                  </v-chip-group>
                 </v-card-text>
               </v-card>
             </div>
@@ -77,11 +73,36 @@ export default {
     ModalFilters
   },
   data: () => ({
-    //user: this.$store.state.user
+    projects: []
   }),
-  computed: {
-    projectItems() {
-      return this.$store.state.projects;
+  mounted() {
+    this.generateData();
+  },
+  watch: {},
+  methods: {
+    generateRandomInt() {
+      return Math.floor(Math.random() * Math.floor(255));
+    },
+    generateData() {
+      const projects = JSON.parse(JSON.stringify(this.$store.state.projects));
+      for (const x in projects) {
+        const item = projects[x];
+        item.style = [];
+        for (const y in item.tech) {
+          const tech = item.tech[y];
+          const first = this.generateRandomInt();
+          const second = this.generateRandomInt();
+          const third = this.generateRandomInt();
+          item.style.push({
+            backgroundColor: `rgba(${first}, ${second}, ${third}, 0.2)`,
+            border: `1px solid rgba(${first}, ${second}, ${third}, 1)`,
+            margin: "2px",
+            fontSize: "12px"
+          });
+          tech;
+        }
+      }
+      this.projects = projects;
     }
   }
 };
