@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" scrollable max-width="300px">
     <template v-slot:activator="{ on }">
-      <v-btn class="float-right" color="btn-filter-open" dark v-on="on"> <v-icon dark>filter_list</v-icon></v-btn>
+      <v-btn class="float-right" color="page-color" dark v-on="on"> <v-icon dark>filter_list</v-icon></v-btn>
     </template>
     <v-card>
       <v-card-title class="darkblue--text">Select </v-card-title>
@@ -30,7 +30,7 @@
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
-        <v-btn color="error darken-1" text @click="dialog = false">Close</v-btn>
+        <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -48,10 +48,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   .btn-filter-open{
-       background-color:#E16062 !important;
-   }
-   .btn-filter-close{
-       color:#E16062 !important;
-   }
+@import "@/css/variable.scss";
+   .page-color {
+    background-color: $blue--color;
+  }
 </style>

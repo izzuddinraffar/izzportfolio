@@ -21,7 +21,7 @@
               <template>
                 <RadarChart />
               </template>
-              <v-btn large color="error" class="white--text mt-5 btn-skill">
+              <v-btn large color="page-color" class="white--text mt-5 btn-skill">
                 <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
               </v-btn>
             </div>
@@ -76,6 +76,7 @@
 </style>
 
 <style lang="scss" scooped>
+@import '@/css/variable.scss';
 .profile {
   .container {
     padding: 0px !important;
@@ -90,8 +91,8 @@
     }
   }
   header {
-    background-color: #009fb3 !important;
-    border-color: #009fb3 !important;
+    background-color: $purple--color;
+    border-color: $purple--color;
     color: #fff !important;
 
     .v-tab {
@@ -105,7 +106,11 @@
     }
   }
   .title-color {
-    color: #009fb3 !important;
+    color: $purple--color;
+  }
+
+  .page-color{
+    background-color:$purple--color;
   }
 }
 </style>

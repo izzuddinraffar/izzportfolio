@@ -45,7 +45,7 @@
                   </div>
                 </div>
                 <div class="text-end">
-                  <v-btn large color="error" class="ma-2 white--text">
+                  <v-btn large color="page-color" class="ma-2 white--text">
                     <v-icon left dark>email</v-icon>Send</v-btn
                   >
                 </div>
@@ -111,6 +111,7 @@
 </style>
 
 <style lang="scss" scooped>
+@import "@/css/variable.scss";
 .contact {
   .container {
     padding: 0px !important;
@@ -125,8 +126,8 @@
     }
   }
   header {
-    background-color: #627d8c !important;
-    border-color: #627d8c !important;
+    background-color: $bluelight--color;
+    border-color: $bluelight--color;
     color: #fff !important;
 
     .v-tab {
@@ -140,7 +141,7 @@
     }
   }
   .title-color {
-    color: #627d8c !important;
+    color: $bluelight--color;
   }
   .fb {
     background: rgb(47, 67, 112) none repeat scroll 0% 0% !important;
@@ -150,6 +151,9 @@
   }
   .github {
     background: rgb(53, 53, 53) none repeat scroll 0% 0% !important;
+  }
+  .page-color{
+    background-color:$bluelight--color;
   }
 }
 </style>

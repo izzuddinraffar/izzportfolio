@@ -5,7 +5,7 @@
         <div class="d-flex col-md-12">
           <div>
             <h3 class="display-1 font-weight-bold title-color  mb-3">
-              MY PORTFOLIO  <ModalFilters/>
+              MY PORTFOLIO <ModalFilters />
             </h3>
             <p>
               From Web Components and UI/UX animations to React.JS, Redux,
@@ -14,7 +14,7 @@
             </p>
           </div>
         </div>
-        
+
         <template v-for="(item, i) in projectItems">
           <div :key="i">
             <div class="pa-1">
@@ -97,6 +97,7 @@ export default {
 </style>
 
 <style lang="scss" scooped>
+@import "@/css/variable.scss";
 .portfolio {
   .container {
     padding: 0px !important;
@@ -109,7 +110,7 @@ export default {
   }
 
   .title-color {
-    color: #e16062 !important;
+    color: $blue--color;
   }
 
   .lightbox {
@@ -120,9 +121,13 @@ export default {
       transparent 72px
     );
   }
+
+  .page-color {
+    background-color: $blue--color;
+  }
   header {
-    background-color: #e16062 !important;
-    border-color: #e16062 !important;
+    background-color: $blue--color;
+    border-color: $blue--color;
     color: #fff !important;
 
     .v-tab {

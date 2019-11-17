@@ -52,6 +52,7 @@
 </style>
 
 <style lang="scss" scooped>
+@import "@/css/variable.scss";
 .skills {
   .container {
     padding: 0px !important;
@@ -71,8 +72,8 @@
   }
 
   header {
-    background-color: #3ea89b !important;
-    border-color: #3ea89b !important;
+    background-color: $orange--color;
+    border-color: $orange--color;
     color: #fff !important;
 
     .v-tab {
@@ -87,12 +88,16 @@
   }
 
   .title-color {
-    color: #3ea89b !important;
+    color: $orange--color;
   }
 }
 
 .darkblue--text {
   color: #5f7987 !important;
+}
+
+.page-color {
+  background-color: $orange--color;
 }
 </style>
 
