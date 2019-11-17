@@ -16,7 +16,7 @@ export default new Vuex.Store({
         { icon: "person", title: "About", link: "/profile" },
         { icon: "bar_chart", title: "Skills", link: "/skills" },
         { icon: "view_module", title: "Portfolio", link: "/portfolio" },
-        { icon: "email", title: "Contact", link: "/contact" },
+        { icon: "email", title: "Contact", link: "/contact" }
         // { divider: true },
         // { icon: "assignment_ind", title: "My Resume", link: "/my-resume" },
         // { icon: "share", title: "Repository", link: "/repository" },
@@ -30,10 +30,88 @@ export default new Vuex.Store({
     },
     skills: {
       tabs: [
-        { icon: "home", title: "Front-end", link: "/" },
-        { icon: "person", title: "Back-end ", link: "/profile" },
-        { icon: "dashboard", title: "DevOps ", link: "/dashboard" },
-        { icon: "dashboard", title: "Others ", link: "/dashboard" }
+        { id: "all", title: "All", link: "/skills" },
+        { id: "front-end", title: "Front-end", link: "/skills/front-end" },
+        { id: "back-end", title: "Back-end ", link: "/skills/back-end" },
+        { id: "devops", title: "DevOps ", link: "/skills/devops" },
+        { id: "others", title: "Others ", link: "/skills/others" }
+      ],
+      bar_chart: [
+        {
+          title: "HTML5",
+          skills: 80,
+          class: "front-end"
+        },
+        {
+          title: "CSS3",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "JavaScript",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "React.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Redux.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Next.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Node.JS",
+          skills: 90,
+          class: "back-end devops"
+        },
+        {
+          title: "PHP",
+          skills: 90,
+          class: "back-end devops"
+        },
+        {
+          title: "Pyhton",
+          skills: 90,
+          class: "back-end devops"
+        },
+        {
+          title: "Vue.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Vuex.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Vuetify.JS",
+          skills: 90,
+          class: "front-end"
+        },
+        {
+          title: "Linux",
+          skills: 90,
+          class: "devops"
+        },
+        {
+          title: "Adobe Photoshop",
+          skills: 90,
+          class: "others"
+        },
+        {
+          title: "Adobe Ilustrator",
+          skills: 90,
+          class: "others"
+        }
       ]
     },
     projects: [

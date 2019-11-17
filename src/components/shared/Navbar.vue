@@ -16,12 +16,10 @@
 
       <template v-if="path == 'skills'" v-slot:extension>
         <v-tabs centered slider-color="white" background-color="transparent">
-          <v-tab
-            v-for="(item, i) in skillTabs"
-            :key="i"
-            :href="`#tab-${item.title}`"
-          >
-            {{ item.title }}
+          <v-tab v-for="(item, i) in skillTabs" :key="i">
+            <router-link :to="item.link">
+              {{ item.title }}
+            </router-link>
           </v-tab>
         </v-tabs>
       </template>
@@ -31,7 +29,7 @@
 
 <script>
 export default {
-   computed: {
+  computed: {
     skillTabs() {
       return this.$store.state.skills.tabs;
     }

@@ -32,7 +32,10 @@
                 <img src="@/assets/avatar.jpg" alt="Izzuddin" />
               </v-avatar> -->
               <template>
-                <BarChart />
+                <bar-chart
+                  :chart-data="datacollection"
+                  :options="options"
+                ></bar-chart>
               </template>
             </div>
           </div>
@@ -101,11 +104,118 @@
 }
 </style>
 
+<style lang="scss">
+.skills .v-tab a {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
+
 <script>
-import BarChart from "../components/skills/BarChart";
+import BarChart from "../components/skills/BarChart-dynamic";
 export default {
   components: {
     BarChart
+  },
+  data() {
+    return {
+      datacollection: null,
+      label: [],
+      datasets: [],
+      options: {
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [
+            {
+              ticks: {
+                min: 0,
+                max: 100,
+                callback: function(value) {
+                  return value + "%";
+                }
+              },
+              scaleLabel: {
+                display: true,
+                labelString: ""
+              }
+            }
+          ]
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    };
+  },
+  mounted() {
+    this.generateData();
+  },
+  watch: {
+    $route() {
+      this.generateData();
+    }
+  },
+  methods: {
+    generateRandomInt() {
+      return Math.floor(Math.random() * Math.floor(255));
+    },
+    generateData() {
+      const id = this.$route.params.id;
+      const skills = this.$store.state.skills.bar_chart;
+      this.labels = [];
+      this.datasets.data = [];
+      this.datasets.backgroundColor = [];
+      this.datasets.borderColor = [];
+      if (id) {
+        for (const x in skills) {
+          const item = skills[x];
+          if (!item.class.includes(id)) {
+            continue;
+          }
+          this.labels.push(item.title);
+          this.datasets.data.push(item.skills);
+          const first = this.generateRandomInt();
+          const second = this.generateRandomInt();
+          const third = this.generateRandomInt();
+          this.datasets.backgroundColor.push(
+            `rgba(${first}, ${second}, ${third}, 0.2)`
+          );
+          this.datasets.borderColor.push(
+            `rgba(${first}, ${second}, ${third}, 1)`
+          );
+        }
+        this.fillData();
+        return;
+      }
+      skills.map(item => {
+        this.labels.push(item.title);
+        this.datasets.data.push(item.skills);
+        const first = this.generateRandomInt();
+        const second = this.generateRandomInt();
+        const third = this.generateRandomInt();
+        this.datasets.backgroundColor.push(
+          `rgba(${first}, ${second}, ${third}, 0.2)`
+        );
+        this.datasets.borderColor.push(
+          `rgba(${first}, ${second}, ${third}, 1)`
+        );
+      });
+      this.fillData();
+    },
+    fillData() {
+      this.datacollection = {
+        labels: this.labels,
+        datasets: [
+          {
+            data: this.datasets.data,
+            backgroundColor: this.datasets.backgroundColor,
+            borderColor: this.datasets.borderColor,
+            borderWidth: 1
+          }
+        ]
+      };
+    }
   }
 };
 </script>

@@ -20,12 +20,11 @@ export default {
     Drawer
   },
   mounted: function() {
-    this.path = this.$route.path== "/" ? "home" : this.$route.path.replace("/", "");
+    this.path = this.$route.name;
   },
   watch: {
     $route() {
-      this.path =
-        this.$route.path == "/" ? "home" : this.$route.path.replace("/", "");
+      this.path = this.$route.name;
     }
   },
   data: () => ({
