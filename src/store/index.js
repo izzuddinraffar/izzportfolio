@@ -189,13 +189,23 @@ export default new Vuex.Store({
           "Web Development"
         ]
       }
-    ]
+    ],
+    portfolio:{
+       filtering: []  
+    }
   },
   mutations: {
     drawerHandler: state => {
       state.drawer.status = state.drawer.status ? false : true;
     },
+    // portfolioFiltering: (state, payload) => {
+    //    state.filtering = payload;
+    // }
   },
-  actions: {},
+  actions: {
+  //   portfolioFiltering: (context, payload) => {
+  //     context.commit('portfolioFiltering', payload);
+  //  }
+  },
   modules: {}
 });

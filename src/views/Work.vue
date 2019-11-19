@@ -61,6 +61,9 @@
             </div>
           </div>
         </template>
+        <v-alert v-if="projects.length==0" icon="info" prominent text type="info">
+          Sorry, no results found! try a different search selection.
+        </v-alert>
       </div>
     </div>
   </div>
@@ -78,16 +81,32 @@ export default {
   mounted() {
     this.generateData();
   },
-  watch: {},
+  watch: {
+    $route() {
+      console.log("watch work");
+      this.generateData();
+    }
+  },
   methods: {
     generateRandomInt() {
       return Math.floor(Math.random() * Math.floor(255));
     },
     generateData() {
+      const params = this.$route.params.filters;
       const projects = JSON.parse(JSON.stringify(this.$store.state.projects));
+      const filteredProjects = [];
       for (const x in projects) {
         const item = projects[x];
         item.style = [];
+        if (params && JSON.parse(params).length != 0) {
+          let state = true;
+          if (JSON.parse(params).some(e => item.tech.includes(e))) {
+            state = false;
+          }
+          if (state) {
+            continue;
+          }
+        }
         for (const y in item.tech) {
           const tech = item.tech[y];
           const first = this.generateRandomInt();
@@ -101,8 +120,9 @@ export default {
           });
           tech;
         }
+        filteredProjects.push(item);
       }
-      this.projects = projects;
+      this.projects = filteredProjects;
     }
   }
 };

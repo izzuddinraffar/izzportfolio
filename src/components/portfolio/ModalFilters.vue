@@ -10,6 +10,7 @@
       <v-divider></v-divider>
       <v-card-text style="height: 300px;">
         <v-checkbox
+          v-model="selected"
           v-for="(item, i) in techData"
           :key="i"
           hide-details
@@ -30,12 +31,24 @@ export default {
   data() {
     return {
       dialogm1: "",
-      dialog: false
+      dialog: false,
+      selected: []
     };
   },
   computed: {
     techData() {
       return this.$store.state.skills.bar_chart;
+    }
+  },
+  updated() {
+    this.updateFiltering();
+  },
+  methods: {
+    updateFiltering() {
+      this.$router.push({path:'/portfolio/'+JSON.stringify(this.selected) })
+
+      //this.$store.dispatch("portfolioFiltering", this.selected);
+
     }
   }
 };
