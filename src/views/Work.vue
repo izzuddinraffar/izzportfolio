@@ -83,7 +83,6 @@ export default {
   },
   watch: {
     $route() {
-      console.log("watch work");
       this.generateData();
     }
   },
