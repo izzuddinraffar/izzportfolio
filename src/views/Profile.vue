@@ -1,29 +1,22 @@
 <template>
   <div class="container">
-    <!-- <div class="header-banner d-flex justify-center col-md-12">
-      <div class=" d-flex align-center col-md-11">
-        <div>
-          <h3 class="display-1 font-weight-bold title-color">
-            See My Profile <br />
-            Looks like...
-          </h3>
-        </div>
-      </div>
-    </div> -->
     <div class="d-flex justify-center col-md-12">
       <div class="d-flex align-top col-md-11">
         <div class="d-flex col-md-5">
           <div class="col-md-12">
             <div class="d-flex align-center flex-column mr-10">
-              <!-- <v-avatar size="120">
-                <img src="@/assets/avatar.jpg" alt="Izzuddin" />
-              </v-avatar> -->
               <template>
                 <RadarChart />
               </template>
-              <v-btn large color="page-color" class="white--text mt-5 btn-skill">
-                <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
-              </v-btn>
+              <router-link to="/skills">
+                <v-btn
+                  large
+                  color="page-color"
+                  class="white--text mt-5 btn-skill"
+                >
+                  <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
+                </v-btn>
+              </router-link>
             </div>
           </div>
         </div>
@@ -76,7 +69,7 @@
 </style>
 
 <style lang="scss" scooped>
-@import '@/css/variable.scss';
+@import "@/css/variable.scss";
 .profile {
   .container {
     padding: 0px !important;
@@ -109,8 +102,8 @@
     color: $purple--color;
   }
 
-  .page-color{
-    background-color:$purple--color;
+  .page-color {
+    background-color: $purple--color;
   }
 }
 </style>

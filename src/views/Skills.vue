@@ -1,15 +1,5 @@
 <template>
   <div class="container">
-    <!-- <div class="header-banner d-flex justify-center col-md-12">
-      <div class=" d-flex align-center col-md-11">
-        <div>
-          <h3 class="display-1 font-weight-bold darkblue--text">
-            Describing My Skills <br />
-            Software Development...
-          </h3>
-        </div>
-      </div>
-    </div> -->
     <div class="d-flex justify-center col-md-12">
       <div class="d-flex align-top col-md-11">
         <div class="col-md-12">

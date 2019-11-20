@@ -15,12 +15,16 @@
         Front-end Developer / Javascript Specialist / CMS Expert
       </p>
       <div class="d-flex align-center justify-end">
-        <v-btn x-large color="error" class="white--text btn-width mr-5">
-          <v-icon left dark>mouse</v-icon>GET STARTED
-        </v-btn>
-        <v-btn x-large outlined color="white" class=" btn-width">
-          <v-icon left dark>email</v-icon>CONTACT
-        </v-btn>
+        <router-link to="/profile">
+          <v-btn x-large color="error" class="white--text btn-width mr-5">
+            <v-icon left dark>mouse</v-icon>GET STARTED
+          </v-btn>
+        </router-link>
+        <router-link to="/contact">
+          <v-btn x-large outlined color="white" class=" btn-width">
+            <v-icon left dark>email</v-icon>CONTACT
+          </v-btn>
+        </router-link>
       </div>
     </div>
   </div>
@@ -28,7 +32,14 @@
 
 <style lang="scss">
 .home .v-content__wrap {
-  background-image: linear-gradient(to right bottom, #1b1b1b, #4c4c4c, #838383, #bfbfbf, #ffffff);
+  background-image: linear-gradient(
+    to right bottom,
+    #1b1b1b,
+    #4c4c4c,
+    #838383,
+    #bfbfbf,
+    #ffffff
+  );
 }
 
 #app.home {
