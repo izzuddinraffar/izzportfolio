@@ -1,27 +1,31 @@
 <template>
   <div class="container d-flex flex-column justify-center">
-    <div class="d-flex flex-column justify-center col-md-6">
+    <div class="d-flex flex-column justify-center col-md-6 col-sm-12">
       <h1
-        class="text-uppercase white--text display-2 font-weight-bold pt-2 pb-2 text-end"
+        class="text-uppercase white--text display-2 font-weight-bold pt-2 pb-2 text-sm-center text-md-end m-welcome"
       >
         Hello, my name is
         <br />
         Mohamad Izzuddin
       </h1>
-      <p class="white--text display-1 pt-2 mb-0 text-end">
+      <p
+        class="white--text display-1 pt-2 mb-0  text-md-end text-sm-center m-title"
+      >
         Experienced Software Developer
       </p>
-      <p class="white--text subtitle pt-2 pb-10 text-end">
+      <p
+        class="white--text subtitle pt-2 pb-10  text-md-end text-sm-center m-subtitle"
+      >
         Front-end Developer / Javascript Specialist / CMS Expert
       </p>
-      <div class="d-flex align-center justify-end">
+      <div class=" d-md-flex  align-md-center justify-md-end btn-position">
         <router-link to="/profile">
-          <v-btn x-large color="error" class="white--text btn-width mr-5">
+          <v-btn x-large color="error" class="white--text btn-width mr-sm-5 mr-md-5 mb-3">
             <v-icon left dark>mouse</v-icon>GET STARTED
           </v-btn>
         </router-link>
         <router-link to="/contact">
-          <v-btn x-large outlined color="white" class=" btn-width">
+          <v-btn x-large outlined color="white" class=" btn-width mb-3">
             <v-icon left dark>email</v-icon>CONTACT
           </v-btn>
         </router-link>
@@ -81,5 +85,39 @@
 
 .home .btn-width {
   width: 200px;
+}
+</style>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 960px) {
+  .container {
+    background-image: none !important;
+    background-color: #292929 !important;
+  }
+   .btn-position {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  h1.m-welcome {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  p.m-title {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+  p.m-subtitle {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+  .btn-position {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
 }
 </style>

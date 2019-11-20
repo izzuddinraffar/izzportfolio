@@ -105,7 +105,7 @@
               </p>
             </div>
             <div class="col-md-12">
-              <a href="https://www.facebook.com/izzudsmile" target="_blank">
+              <a href="https://www.facebook.com/izzuddinraffar" target="_blank">
                 <v-btn
                   width="44"
                   min-width="44"
