@@ -1,26 +1,33 @@
 <template>
   <div class="container d-flex flex-column justify-center">
-    <div class="d-flex flex-column justify-center col-md-6 col-sm-12">
+    <div class="d-flex  content flex-column justify-center col-md-6 col-sm-12">
       <h1
+        ref="hello"
         class="text-uppercase white--text display-2 font-weight-bold pt-2 pb-2 text-sm-center text-md-end m-welcome"
       >
-        Hello, my name is
+        <span> Hello </span>, my name is
         <br />
         Mohamad Izzuddin
       </h1>
       <p
+        ref="title"
         class="white--text display-1 pt-2 mb-0  text-md-end text-sm-center m-title"
       >
         Experienced Software Developer
       </p>
       <p
+        ref="subtitle"
         class="white--text subtitle pt-2 pb-10  text-md-end text-sm-center m-subtitle"
       >
         Front-end Developer / Javascript Specialist / CMS Expert
       </p>
-      <div class=" d-md-flex  align-md-center justify-md-end btn-position">
+      <div ref="btn" class=" d-md-flex  align-md-center justify-md-end btn-position">
         <router-link to="/profile">
-          <v-btn x-large color="error" class="white--text btn-width mr-sm-5 mr-md-5 mb-3">
+          <v-btn
+            x-large
+            color="error"
+            class="white--text btn-width mr-sm-5 mr-md-5 mb-3"
+          >
             <v-icon left dark>mouse</v-icon>GET STARTED
           </v-btn>
         </router-link>
@@ -31,8 +38,29 @@
         </router-link>
       </div>
     </div>
+    <div ref="bg" class="bg"></div>
   </div>
 </template>
+
+<script>
+import { TweenLite, TimelineLite } from "gsap";
+export default {
+  mounted() {
+    const { hello, title, subtitle, btn, bg } = this.$refs;
+    TweenLite.set(hello, { x: -200, rotation: 90, opacity: 0 });
+    TweenLite.set(bg, { x: -200, rotation: 0, opacity: 0 });
+    TweenLite.set(title, { x: 200, rotation: 0, opacity: 0 });
+    TweenLite.set(subtitle, { x: -200, rotation: 0, opacity: 0 });
+    TweenLite.set(btn, { opacity: 0 });
+    const timeline = new TimelineLite();
+    timeline.to(hello, 0.3, { x: 0, rotation: 0, opacity: 1 });
+    timeline.to(bg, 0.3, { x: 0, rotation: 0, opacity: 1 });
+    timeline.to(title, 0.5, { x: 0, rotation: 0, opacity: 1 });
+    timeline.to(subtitle, 0.3, { x: 0, rotation: 0, opacity: 1 });
+    timeline.to(btn, 1, { opacity: 1 });
+  }
+};
+</script>
 
 <style lang="scss">
 .home .v-content__wrap {
@@ -66,8 +94,21 @@
 .home .container {
   height: calc(100vh - 0px);
   position: relative;
+  overflow: hidden;
+}
+
+.home .container .bg {
   background-image: url("~@/assets/home9.png");
   background-position-x: right;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.home .container .content {
+  position: relative;
+  z-index: 2;
 }
 
 .home .container * {
@@ -90,15 +131,15 @@
 
 <style lang="scss" scoped>
 @media only screen and (max-width: 960px) {
-  .container {
+  .container,
+  .bg {
     background-image: none !important;
     background-color: #292929 !important;
   }
-   .btn-position {
+  .btn-position {
     display: flex !important;
     justify-content: center !important;
   }
-  
 }
 @media only screen and (max-width: 600px) {
   h1.m-welcome {
@@ -118,6 +159,5 @@
     flex-direction: column !important;
     align-items: center !important;
   }
-  
 }
 </style>
