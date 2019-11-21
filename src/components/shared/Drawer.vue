@@ -16,17 +16,20 @@
       </v-img>
 
       <v-list>
-        <v-list-item-group color="primary">
-          <template v-for="(item, i) in drawerItems">
-            <v-divider v-if="item.divider" :key="i"></v-divider>
-            <router-link v-else :key="i" :to="item.link">
-              <v-list-item>
-                <v-list-item-action>
-                  <v-icon>{{ item.icon }}</v-icon>
-                </v-list-item-action>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
-              </v-list-item>
-            </router-link>
+        <v-list-item-group v-model="selected" color="primary">
+          <template v-for="item in drawerItems">
+            <v-divider v-if="item.divider" :key="item.id"></v-divider>
+            <v-list-item
+              v-else
+              :key="item.id"
+              :to="item.link"
+              active-class="deep-purple--text text--accent-4"
+            >
+              <v-list-item-action>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-action>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
           </template>
         </v-list-item-group>
       </v-list>
@@ -36,7 +39,10 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    selected: ""
+  }),
+  props: ["appPath"],
   computed: {
     drawerHandler: {
       get() {
@@ -48,6 +54,12 @@ export default {
     },
     drawerItems() {
       return this.$store.state.drawer.items;
+    }
+  },
+  watch: {
+    $route() {
+      this.selected = this.appPath;
+      console.log(this.selected);
     }
   }
 };

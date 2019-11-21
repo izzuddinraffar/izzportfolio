@@ -12,11 +12,11 @@ export default new Vuex.Store({
     drawer: {
       status: true,
       items: [
-        { icon: "home", title: "Welcome", link: "/" },
-        { icon: "person", title: "About", link: "/profile" },
-        { icon: "bar_chart", title: "Skills", link: "/skills" },
-        { icon: "view_module", title: "Portfolio", link: "/portfolio" },
-        { icon: "email", title: "Contact", link: "/contact" }
+        {id:'home', icon: "home", title: "Welcome", link: "/" },
+        {id:'profile', icon: "person", title: "About", link: "/profile" },
+        {id:'skills', icon: "bar_chart", title: "Skills", link: "/skills" },
+        {id:'portfolio', icon: "view_module", title: "Portfolio", link: "/portfolio" },
+        {id:'contact', icon: "email", title: "Contact", link: "/contact" }
         // { divider: true },
         // { icon: "assignment_ind", title: "My Resume", link: "/my-resume" },
         // { icon: "share", title: "Repository", link: "/repository" },

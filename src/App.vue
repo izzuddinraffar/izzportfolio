@@ -1,7 +1,7 @@
 <template>
   <v-app :class="path">
     <Navbar :appPath="path" />
-    <Drawer />
+    <Drawer :appPath="path" />
     <v-content>
       <router-view class="pa-4"></router-view>
     </v-content>
@@ -42,7 +42,7 @@ html {
   color: #5f7987 !important;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 </style>

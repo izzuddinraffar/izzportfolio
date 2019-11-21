@@ -146,12 +146,17 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "@/css/variable.scss";
 .v-application.profile .container.pa-4 {
   padding: 0px !important;
   margin: 0px !important;
   width: 100% !important;
   max-width: 100% !important;
+}
+.contact #mainDrawer  .deep-purple--text.text--accent-4 {
+  color: $bluelight--color;
+  caret-color: $bluelight--color;
 }
 </style>
 

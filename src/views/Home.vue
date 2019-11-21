@@ -134,6 +134,11 @@ export default {
 .home .btn-width {
   width: 200px;
 }
+
+.home #mainDrawer  .deep-purple--text.text--accent-4 {
+  color: #404040 !important;
+  caret-color:  #404040 !important;
+}
 </style>
 
 <style lang="scss" scoped>
