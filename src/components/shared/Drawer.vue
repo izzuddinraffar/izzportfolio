@@ -59,7 +59,6 @@ export default {
   watch: {
     $route() {
       this.selected = this.appPath;
-      console.log(this.selected);
     }
   }
 };
