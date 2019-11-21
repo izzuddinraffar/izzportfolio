@@ -3,11 +3,11 @@
     <div class="d-flex justify-center col-md-12">
       <div class="d-flex align-top col-md-11 flex-wrap">
         <div class="d-flex col-md-5 col-sm-12">
-          <div class="col-md-12">
-            <div class="d-flex align-center flex-column mr-sm-10 mr-md-10">
-              <template>
-                <RadarChart />
-              </template>
+          <div class="col-md-12 pa-0">
+            <div class="d-flex align-center flex-column">
+              <div  class="col-md-12 pa-0">
+              <RadarChart />
+              </div>
               <router-link class="d-none d-sm-none d-md-flex" to="/skills">
                 <v-btn
                   large
@@ -52,15 +52,15 @@
               these fields, the time in this sector greatly improved my overall
               experience and skills.
             </p>
-             <router-link class="d-flex d-md-none" to="/skills">
-                <v-btn
-                  large
-                  color="page-color"
-                  class="white--text mt-5 btn-skill"
-                >
-                  <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
-                </v-btn>
-              </router-link>
+            <router-link class="d-flex d-md-none" to="/skills">
+              <v-btn
+                large
+                color="page-color"
+                class="white--text mt-5 btn-skill"
+              >
+                <v-icon left dark>mouse</v-icon>LOOK AT MY SKILLS
+              </v-btn>
+            </router-link>
           </div>
         </div>
       </div>

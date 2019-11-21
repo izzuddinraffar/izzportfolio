@@ -2,7 +2,7 @@
   <nav>
     <v-app-bar flat app>
       <v-app-bar-nav-icon
-        v-on:click.stop="drawerHandler"
+        v-on:click.stop="drawerHandler =! drawerHandler"
         class="grey--text"
       ></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
@@ -16,10 +16,8 @@
 
       <template v-if="path == 'skills'" v-slot:extension>
         <v-tabs centered slider-color="white" background-color="transparent">
-          <v-tab v-for="(item, i) in skillTabs" :key="i">
-            <router-link :to="item.link">
-              {{ item.title }}
-            </router-link>
+          <v-tab v-for="(item, i) in skillTabs" :key="i" :to="item.link">
+            {{ item.title }}
           </v-tab>
         </v-tabs>
       </template>
@@ -32,11 +30,10 @@ export default {
   computed: {
     skillTabs() {
       return this.$store.state.skills.tabs;
-    }
-  },
-  methods: {
-    drawerHandler: function() {
-      this.$store.commit("drawerHandler");
+    },
+    drawerHandler: {
+      get () { return this.$store.getters.drawerHandler },
+      set (v) { return this.$store.commit('setDrawer', v) }
     }
   },
   props: ["appPath"],

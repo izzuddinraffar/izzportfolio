@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="d-flex justify-center col-md-12">
-      <div class="d-flex align-top col-md-11">
-        <div class="col-md-8 d-flex">
+    <div class="d-flex justify-center col-md-12 pa-0">
+      <div class="d-flex align-top col-md-11 flex-wrap">
+        <div class="col-md-8 col-sm-12 d-flex">
           <div>
             <div class="col-md-12">
               <h3 class="display-1 font-weight-bold title-color  mb-3">
@@ -91,9 +91,9 @@
               Close
             </v-btn>
           </v-snackbar>
-          <v-divider class="mx-4" vertical></v-divider>
+          <v-divider class="mx-4 d-none d-md-flex" vertical></v-divider>
         </div>
-        <div class="col-md-4 d-flex">
+        <div class="col-md-4 col-sm-12 d-flex">
           <div>
             <div class="col-md-12">
               <h4 class="title font-weight-bold darkblue--text mb-3">

@@ -41,4 +41,8 @@ html {
 .darkblue--text {
   color: #5f7987 !important;
 }
+
+a{
+  text-decoration: none !important;
+}
 </style>

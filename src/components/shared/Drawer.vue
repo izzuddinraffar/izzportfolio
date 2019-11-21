@@ -1,40 +1,50 @@
 <template>
-  <v-navigation-drawer class="drawer" app :value="drawerOpened">
-    <v-img :aspect-ratio="16 / 9" src="@/assets/drawer/drawer.png">
-      <v-row align="end" class="lightbox white--text pa-2 fill-height">
-        <v-col>
-          <div class="subheading">{{ this.$store.state.user.name }}</div>
-          <div class="body-1">{{ this.$store.state.user.email }}</div>
-        </v-col>
-      </v-row>
-    </v-img>
+  <div id="mainDrawer">
+    <v-navigation-drawer
+      disable-resize-watcher
+      class="drawer"
+      app
+      v-model="drawerHandler"
+    >
+      <v-img :aspect-ratio="16 / 9" src="@/assets/drawer/drawer.png">
+        <v-row align="end" class="lightbox white--text pa-2 fill-height">
+          <v-col>
+            <div class="subheading">{{ this.$store.state.user.name }}</div>
+            <div class="body-1">{{ this.$store.state.user.email }}</div>
+          </v-col>
+        </v-row>
+      </v-img>
 
-    <v-list>
-      <v-list-item-group color="primary">
-        <template v-for="(item, i) in drawerItems">
-          <v-divider v-if="item.divider" :key="i"></v-divider>
-          <router-link v-else :key="i" :to="item.link">
-            <v-list-item>
-              <v-list-item-action>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
-          </router-link>
-        </template>
-      </v-list-item-group>
-    </v-list>
-  </v-navigation-drawer>
+      <v-list>
+        <v-list-item-group color="primary">
+          <template v-for="(item, i) in drawerItems">
+            <v-divider v-if="item.divider" :key="i"></v-divider>
+            <router-link v-else :key="i" :to="item.link">
+              <v-list-item>
+                <v-list-item-action>
+                  <v-icon>{{ item.icon }}</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </router-link>
+          </template>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    //user: this.$store.state.user
-  }),
+  data: () => ({}),
   computed: {
-    drawerOpened() {
-      return this.$store.state.drawer.status;
+    drawerHandler: {
+      get() {
+        return this.$store.getters.drawerHandler;
+      },
+      set(v) {
+        return this.$store.commit("setDrawer", v);
+      }
     },
     drawerItems() {
       return this.$store.state.drawer.items;

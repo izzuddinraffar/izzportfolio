@@ -16,9 +16,9 @@
         </div>
 
         <template v-for="(item, i) in projects">
-          <div :key="i">
+          <div class="col-md-4 col-sm-6 col-xs-12" :key="i">
             <div class="pa-1">
-              <v-card max-width="310">
+              <v-card max-width="350" min-width="250">
                 <div class="lightbox">
                   <v-img height="200" src="@/assets/drawer/material.webp">
                     <v-row
@@ -44,24 +44,31 @@
                 </v-card-text>
 
                 <v-divider class="mx-4"></v-divider>
-                <v-card-text>
+                <v-card-text class="">
                   <!-- <div class="my-4 subtitle-1 black--text">
                     Technologies
                   </div> -->
-
-                  <v-chip
-                    :ripple="false"
-                    v-bind:style="item.style[ti]"
-                    v-for="(tech, ti) in item.tech"
-                    :key="ti"
-                    >{{ tech }}</v-chip
-                  >
+                  <div class="max-tech-box">
+                    <v-chip
+                      :ripple="false"
+                      v-bind:style="item.style[ti]"
+                      v-for="(tech, ti) in item.tech"
+                      :key="ti"
+                      >{{ tech }}</v-chip
+                    >
+                  </div>
                 </v-card-text>
               </v-card>
             </div>
           </div>
         </template>
-        <v-alert v-if="projects.length==0" icon="info" prominent text type="info">
+        <v-alert
+          v-if="projects.length == 0"
+          icon="info"
+          prominent
+          text
+          type="info"
+        >
           Sorry, no results found! try a different search selection.
         </v-alert>
       </div>
@@ -179,6 +186,14 @@ export default {
     .v-tab--active {
       color: #fff !important;
     }
+  }
+
+  .max-tech-box {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="d-flex justify-center col-md-12">
+    <div class="d-flex justify-center col-md-12 pa-0">
       <div class="d-flex align-top col-md-11">
         <div class="col-md-12">
           <div class="d-flex col-md-12">
@@ -16,7 +16,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 pa-0">
             <div class="d-flex align-center flex-column mr-10  chart-container">
               <!-- <v-avatar size="120">
                 <img src="@/assets/avatar.jpg" alt="Izzuddin" />
@@ -129,6 +129,9 @@ export default {
               scaleLabel: {
                 display: true,
                 labelString: ""
+              },
+              gridLines: {
+                drawOnChartArea: false
               }
             }
           ]
