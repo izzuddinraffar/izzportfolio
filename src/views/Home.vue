@@ -21,7 +21,10 @@
       >
         Front-end Developer / Javascript Specialist / CMS Expert
       </p>
-      <div ref="btn" class=" d-md-flex  align-md-center justify-md-end btn-position">
+      <div
+        ref="btn"
+        class=" d-md-flex  align-md-center justify-md-end btn-position"
+      >
         <router-link to="/profile">
           <v-btn
             x-large
@@ -43,7 +46,11 @@
 </template>
 
 <script>
-import { TweenLite, TimelineLite } from "gsap";
+//import { TweenLite, TimelineLite } from "gsap";
+import { TweenLite, TimelineLite } from "gsap/all";
+const plugins = [ TweenLite, TimelineLite ];
+plugins;
+
 export default {
   mounted() {
     const { hello, title, subtitle, btn, bg } = this.$refs;
