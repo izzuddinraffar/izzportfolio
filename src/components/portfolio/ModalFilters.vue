@@ -6,7 +6,7 @@
       >
     </template>
     <v-card>
-      <v-card-title class="darkblue--text">Select technology </v-card-title>
+      <v-card-title class="darkblue--text">Filter by </v-card-title>
       <v-divider></v-divider>
       <v-card-text style="height: 300px;">
         <v-checkbox
