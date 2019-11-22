@@ -3,9 +3,6 @@ module.exports = {
     "vuetify"
   ],
   configureWebpack:{
-    performance: {
-      hints: false
-    },
     optimization: {
       splitChunks: {
         minSize: 10000,
