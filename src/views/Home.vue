@@ -5,7 +5,7 @@
         ref="hello"
         class="text-uppercase white--text display-2 font-weight-bold pt-2 pb-2 text-sm-center text-md-end m-welcome"
       >
-        <span> Hello </span>, my name is
+        <span> Hello</span>, my name is
         <br />
         Mohamad Izzuddin
       </h1>
