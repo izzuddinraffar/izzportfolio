@@ -100,8 +100,7 @@
                 Let's get social
               </h4>
               <p class="mb-0">
-                Follow my online fan page on Facebook and profiles on Twitter,
-                GitHub and Linkedin.
+                Follow my official profiles and activities on Facebook, Linkedin, and GitHub. 
               </p>
             </div>
             <div class="col-md-12">

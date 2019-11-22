@@ -11,8 +11,9 @@
               <p>
                 The main area of my skills tend to the front-end developer
                 (client side of the web). I have also full-stack developer
-                skills and devOps in the software development. Take a look my
-                skills below.
+                skills and devOps in the software development. 
+                <strong class="darkblue--text">Take a look my
+                skills below.</strong>
               </p>
             </div>
           </div>

@@ -17,11 +17,6 @@ export default new Vuex.Store({
         {id:'skills', icon: "bar_chart", title: "Skills", link: "/skills" },
         {id:'portfolio', icon: "view_module", title: "Portfolio", link: "/portfolio" },
         {id:'contact', icon: "email", title: "Contact", link: "/contact" }
-        // { divider: true },
-        // { icon: "assignment_ind", title: "My Resume", link: "/my-resume" },
-        // { icon: "share", title: "Repository", link: "/repository" },
-        // { icon: "info", title: "About", link: "/about" },
-        // { icon: "email", title: "Contact", link: "/contact" }
       ]
     },
     user: {
@@ -39,7 +34,7 @@ export default new Vuex.Store({
       bar_chart: [
         {
           title: "HTML5",
-          skills: 80,
+          skills: 95,
           class: "front-end"
         },
         {
@@ -49,7 +44,7 @@ export default new Vuex.Store({
         },
         {
           title: "JavaScript",
-          skills: 90,
+          skills: 100,
           class: "front-end"
         },
         {
@@ -59,28 +54,38 @@ export default new Vuex.Store({
         },
         {
           title: "Redux.JS",
-          skills: 90,
+          skills: 98,
           class: "front-end"
         },
         {
           title: "Next.JS",
-          skills: 90,
+          skills: 95,
           class: "front-end"
         },
         {
           title: "Node.JS",
           skills: 90,
-          class: "back-end devops"
+          class: "back-end"
+        },
+        {
+          title: "Socket.IO",
+          skills: 65,
+          class: "back-end"
         },
         {
           title: "PHP",
-          skills: 90,
-          class: "back-end devops"
+          skills: 75,
+          class: "back-end"
         },
         {
-          title: "Pyhton",
-          skills: 90,
-          class: "back-end devops"
+          title: "Python",
+          skills: 80,
+          class: "back-end"
+        },
+        {
+          title: "Flask (Python)",
+          skills: 80,
+          class: "back-end"
         },
         {
           title: "Vue.JS",
@@ -98,27 +103,43 @@ export default new Vuex.Store({
           class: "front-end"
         },
         {
-          title: "Linux",
+          title: "GIT",
+          skills: 98,
+          class: "devops"
+        },
+        {
+          title: "Netlify",
           skills: 90,
           class: "devops"
         },
         {
-          title: "Adobe Photoshop",
+          title: "Heroku",
           skills: 90,
+          class: "devops"
+        },
+        {
+          title: "Linux",
+          skills: 55,
+          class: "devops"
+        },
+        {
+          title: "Adobe Photoshop",
+          skills: 75,
           class: "others"
         },
         {
           title: "Adobe Ilustrator",
-          skills: 90,
+          skills: 65,
           class: "others"
         }
       ]
     },
     projects: [
       {
-        image: "home",
+        icon: "layouts/portfolio/projects/hometutor.png",
         title: "HomeTutor",
-        link: "/",
+        desc:"HomeTutor is an online learning application focuses on exercise from primary to middle school.",
+        link: "https://hometutor.com.my",
         tech: [
           "HTML5",
           "CSS3",
@@ -133,24 +154,27 @@ export default new Vuex.Store({
         ]
       },
       {
-        image: "person",
+        icon: "layouts/portfolio/projects/xcelearn.png",
         title: "Xcelearn ",
-        link: "/profile",
+        desc:"Xcelearn is a learning management system which is using the MOOCS concept in the education.",
+        link: "http://xcelearn.com.my",
         tech: [
           "HTML5",
           "CSS3",
           "JavaScript",
           "React.JS",
           "Redux.JS",
+          "Next.JS",
           "Node.JS",
           "PostgreSQL",
           "Web Development"
         ]
       },
       {
-        image: "dashboard",
+        icon: "layouts/portfolio/projects/simpana.png",
         title: "Simpana ",
-        link: "/dashboard",
+        desc:"Simpana is online asset management to manage, analysis and control learning content platforms.",
+        link: "http://cloudhub.my",
         tech: [
           "HTML5",
           "CSS3",
@@ -162,9 +186,10 @@ export default new Vuex.Store({
         ]
       },
       {
-        image: "view_module",
+        icon: "layouts/portfolio/projects/insight.png",
         title: "Insight",
-        link: "/projects",
+        desc:"Insight is a student monitoring system for analyzing student performance, progress, demographics and so on.",
+        link: "http://cloudhub.my",
         tech: [
           "HTML5",
           "CSS3",
@@ -176,9 +201,10 @@ export default new Vuex.Store({
         ]
       },
       {
-        image: "assignment_ind",
+        icon: "layouts/portfolio/projects/centrack.png",
         title: "Centrack",
-        link: "/my-resume",
+        desc:"Centrack is a user and commission management system that provide reports and tracking sales in real-time. ",
+        link: "http://cloudhub.my",
         tech: [
           "HTML5",
           "CSS3",

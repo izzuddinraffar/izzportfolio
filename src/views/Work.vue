@@ -8,8 +8,8 @@
               MY PORTFOLIO <ModalFilters />
             </h3>
             <p>
-              From Web Components and UI/UX animations to React.JS, Redux,
-              Vue.JS, Node.JS and others. Check out my latest software
+              Using modern development libraries/frameworks like React.JS, Redux,
+              Vue.JS, Node.JS, and others. Check out my latest software
               development portfolio projects.
             </p>
           </div>
@@ -20,14 +20,20 @@
             <div class="pa-1">
               <v-card max-width="350" min-width="250">
                 <div class="lightbox">
-                  <v-img height="200" src="@/assets/drawer/material.webp">
+                  <v-img
+                    height="200"
+                    position="top center"
+                    :src="require(`@/assets/${item.icon}`)"
+                  >
                     <v-row
                       align="end"
                       class="lightbox white--text pa-2 fill-height"
                     >
-                      <v-card-title class="project-title">{{
-                        item.title
-                      }}</v-card-title>
+                      <a :href="item.link" target="_blank">
+                        <v-card-title class="project-title pb-1">{{
+                          item.title
+                        }}</v-card-title>
+                      </a>
                     </v-row>
                   </v-img>
                 </div>
@@ -38,8 +44,7 @@
                   </div> -->
 
                   <div>
-                    In understanding how this concept works, a comprehension the
-                    technologies behind cryptocurrencies is essential.
+                    {{ item.desc }}
                   </div>
                 </v-card-text>
 
@@ -142,7 +147,7 @@ export default {
   width: 100% !important;
   max-width: 100% !important;
 }
-.portfolio #mainDrawer  .deep-purple--text.text--accent-4 {
+.portfolio #mainDrawer .deep-purple--text.text--accent-4 {
   color: $blue--color;
   caret-color: $blue--color;
 }
@@ -169,8 +174,8 @@ export default {
     box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.4) 0%,
-      transparent 72px
+      rgb(255, 255, 255) 0%,
+      #0000 72px
     );
   }
 

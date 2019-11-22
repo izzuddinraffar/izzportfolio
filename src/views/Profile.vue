@@ -30,28 +30,16 @@
               Experience as Software Developer
             </p>
             <p>
-              Starting out at the age of 13 I never stopped learning new
-              programming skills and languages. Early I started creating
-              websites for friends and just for fun as well. Besides web
-              development I also explored Python and other non-web-only
-              languages. This passion has since lasted and lead to my decision
-              of working as a freelance web developer and consultant. The
-              success and fun I have in this job is immense and really keeps
-              that passion burningly alive.
+             
             </p>
             <p>
-              Starting web development on the backend (PHP with Laravel, NodeJS,
-              Python) I also became more and more of a frontend developer using
-              modern frameworks like React, Angular or VueJS 2 in a lot of
-              projects. I love both worlds nowadays!
+              My name is Mohamad Izzuddin bin Ab Raffar. I was graduated with a bachelor's degree from USIM. I've been very passioned in software development since I was 20 years old. Since then, I always used HTML & CSS for simple projects and creating custom templates for Blogspot.
             </p>
             <p>
-              As a self-taught developer I had the chance to broaden my horizon
-              by studying Business Administration where I hold a Master's
-              degree. That enabled me to work in a major strategy consultancy as
-              well as a bank. While learning, that I enjoy development more than
-              these fields, the time in this sector greatly improved my overall
-              experience and skills.
+              During my studies in the year 2010 - 2014 in USIM, I was involved in 2 projects related to website development. The first is a simple CRUD application using HTML, CSS, Javascript & PHP. Then the second one uses CMS Joomla.
+            </p>
+            <p>
+              I have almost 5 years of experience in the private IT company expecially expertise in software development.  During my career, I have been exposed to developing complex applications from A-Z, which is starting to code a blank page to be a useful page. My position like more to Front-end & Solution Developer. Previously, I was familiar with traditional development tools like jQuery, Bootstrap and PHP.  Nowadays, I tend to develop applications with modern development tools like using React.JS, Vue.JS, Node.JS and more.
             </p>
             <router-link class="d-flex d-md-none" to="/skills">
               <v-btn
