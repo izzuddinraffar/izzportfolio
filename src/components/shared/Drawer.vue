@@ -1,7 +1,6 @@
 <template>
   <div id="mainDrawer">
     <v-navigation-drawer
-      disable-resize-watcher
       class="drawer"
       app
       v-model="drawerHandler"
