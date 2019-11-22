@@ -47,9 +47,9 @@
               especially expertise in software development. During my career, I
               have been exposed to develop complex applications from A-Z, which
               is starting to code a blank page to be a useful page. My position
-              like more to Front-end & Solution Developer. Previously, I was
-              familiar with traditional development tools like jQuery, Bootstrap
-              and PHP. Nowadays, I tend to develop applications with modern
+              like more to Front-end & Solution Developer. I was familiar with
+              traditional development tools like jQuery, Bootstrap and PHP
+              previously. Nowadays, I tend to develop applications with modern
               development tools like using React.JS, Vue.JS, Node.JS and more.
             </p>
             <router-link class="d-flex d-md-none" to="/skills">
