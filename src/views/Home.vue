@@ -138,14 +138,22 @@ export default {
   color: #404040 !important;
   caret-color:  #404040 !important;
 }
+@media only screen and (max-width: 600px) {
+  .home div.container{
+    padding: 0px !important;
+  }
+}
 </style>
 
 <style lang="scss" scoped>
 @media only screen and (max-width: 960px) {
   .container,
   .bg {
-    background-image: none !important;
     background-color: #292929 !important;
+  }
+   .container .bg {
+    background-image: url("~@/assets/home10.png") !important;
+    background-position:center center;
   }
   .btn-position {
     display: flex !important;
