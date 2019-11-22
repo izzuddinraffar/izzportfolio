@@ -1,4 +1,3 @@
-
 <template>
   <div class="container">
     <div class="d-flex justify-center col-md-12">
@@ -6,8 +5,8 @@
         <div class="d-flex col-md-5 col-sm-12">
           <div class="col-md-12 pa-0">
             <div class="d-flex align-center flex-column">
-              <div  class="col-md-12 pa-0">
-              <RadarChart />
+              <div class="col-md-12 pa-0">
+                <RadarChart />
               </div>
               <router-link class="d-none d-sm-none d-md-flex" to="/skills">
                 <v-btn
@@ -29,17 +28,29 @@
             <p class="darkblue--text font-weight-bold mb-3">
               Experience as Software Developer
             </p>
+            <p></p>
             <p>
-             
+              My name is Mohamad Izzuddin bin Ab Raffar. I was graduated with a
+              bachelor's degree from USIM. I've been very passioned in software
+              development since I was 20 years old. Since then, I always used
+              HTML & CSS for simple projects and creating custom templates for
+              Blogspot.
             </p>
             <p>
-              My name is Mohamad Izzuddin bin Ab Raffar. I was graduated with a bachelor's degree from USIM. I've been very passioned in software development since I was 20 years old. Since then, I always used HTML & CSS for simple projects and creating custom templates for Blogspot.
+              During my studies in the year 2010 - 2014 in USIM, I was involved
+              in 2 projects related to website development. The first is a
+              simple CRUD application using HTML, CSS, Javascript & PHP. Then
+              the second one uses CMS Joomla.
             </p>
             <p>
-              During my studies in the year 2010 - 2014 in USIM, I was involved in 2 projects related to website development. The first is a simple CRUD application using HTML, CSS, Javascript & PHP. Then the second one uses CMS Joomla.
-            </p>
-            <p>
-              I have almost 5 years of experience in the private IT company expecially expertise in software development.  During my career, I have been exposed to developing complex applications from A-Z, which is starting to code a blank page to be a useful page. My position like more to Front-end & Solution Developer. Previously, I was familiar with traditional development tools like jQuery, Bootstrap and PHP.  Nowadays, I tend to develop applications with modern development tools like using React.JS, Vue.JS, Node.JS and more.
+              I have almost 5 years of experience in the private IT company
+              especially expertise in software development. During my career, I
+              have been exposed to develop complex applications from A-Z, which
+              is starting to code a blank page to be a useful page. My position
+              like more to Front-end & Solution Developer. Previously, I was
+              familiar with traditional development tools like jQuery, Bootstrap
+              and PHP. Nowadays, I tend to develop applications with modern
+              development tools like using React.JS, Vue.JS, Node.JS and more.
             </p>
             <router-link class="d-flex d-md-none" to="/skills">
               <v-btn
@@ -65,7 +76,7 @@
   width: 100% !important;
   max-width: 100% !important;
 }
-.profile #mainDrawer  .deep-purple--text.text--accent-4 {
+.profile #mainDrawer .deep-purple--text.text--accent-4 {
   color: $purple--color;
   caret-color: $purple--color;
 }
@@ -109,8 +120,6 @@
     background-color: $purple--color;
   }
 }
-
-
 </style>
 
 <script>
