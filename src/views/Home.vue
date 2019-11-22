@@ -47,9 +47,8 @@
 
 <script>
 //import { TweenLite, TimelineLite } from "gsap";
-import { TweenLite, TimelineLite } from "gsap/all";
-const plugins = [ TweenLite, TimelineLite ];
-plugins;
+import { gsap, TweenLite, TimelineLite } from "gsap";
+gsap.registerPlugin(TweenLite,TimelineLite); 
 
 export default {
   mounted() {

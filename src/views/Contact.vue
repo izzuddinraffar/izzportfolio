@@ -84,7 +84,7 @@
             :color="snackbar_color"
             v-model="snackbar"
             :timeout="timeout"
-            top="top"
+            multi-line="multi-line"
           >
             {{ snackbar_text }}
             <v-btn color="white" text @click="snackbar = false">

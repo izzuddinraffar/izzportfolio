@@ -3,7 +3,7 @@
     <Navbar :appPath="path" />
     <Drawer :appPath="path" />
     <v-content>
-      <router-view class="pa-4"></router-view>
+        <router-view class="pa-4"></router-view>
     </v-content>
   </v-app>
 </template>
@@ -45,4 +45,7 @@ html {
 a {
   text-decoration: none !important;
 }
+
+
+
 </style>

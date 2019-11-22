@@ -1,3 +1,4 @@
+
 <template>
   <div class="container">
     <div class="d-flex justify-center col-md-12">
@@ -120,6 +121,8 @@
     background-color: $purple--color;
   }
 }
+
+
 </style>
 
 <script>
